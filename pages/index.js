@@ -10,6 +10,7 @@ export default function Home() {
         <meta name="description" content="Demo ecommerce web app." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <h1>Hello world</h1>
     </>
   );
 }
