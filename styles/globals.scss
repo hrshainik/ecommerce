@@ -10,6 +10,9 @@ $offPurple: #9F63B5;
 $skyBlue: #F3F9FF;
 $pantonePurple: #E0D3F5;
 $white: #ffffff;
+$navbar: 60px;
+$maxWidth: 1200px;
+$width: 97%;
 
 @mixin for-size($size) {
   @if $size == phone-only {
@@ -55,4 +58,23 @@ a {
   //   color: white;
   //   background: black;
   // }
+}
+
+section {
+  background-color: $white;
+
+  .section {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+  }
+}
+
+nav, footer {
+  & > div {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+  }
 }
