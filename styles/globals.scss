@@ -8,11 +8,16 @@ $navyBlue: #151875;
 $purple: #7E33E0;
 $offPurple: #9F63B5;
 $skyBlue: #F3F9FF;
+$skyBlue1: #EBF4F3;
 $pantonePurple: #E0D3F5;
 $white: #ffffff;
+$white1: #F6F7FB;
+$tigerC: #DE9034;
 $navbar: 60px;
 $maxWidth: 1200px;
 $width: 97%;
+$h: normal 700 18px 'Josefin Sans', sans-serif;
+$p: normal 400 14px 'Josefin Sans', sans-serif;
 
 @mixin for-size($size) {
   @if $size == phone-only {
@@ -76,5 +81,79 @@ nav, footer {
     width: $width;
     max-width: $maxWidth;
     margin: 0 auto;
+  }
+}
+
+img {
+  overflow: hidden;
+}
+
+// Cards
+.regular-product-cs {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3em;
+}
+
+.regular-product-c {
+  flex: 1 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  cursor: pointer;
+
+  &:hover {
+    .regular-product-c__img {
+      background-color: $skyBlue1;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    background-color: $white1;
+    padding: 2em;
+    margin-bottom: 10px;
+    transition: background-color 300ms ease;
+  }
+
+  &__title {
+    text-align: center;
+    color: $navyBlue;
+    margin-bottom: 6px;
+    font: $h;
+  }
+
+  &__dot {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 12px;
+
+    & > div {
+      width: 10px;
+      height: 10px;
+      border-radius: 100vh;
+    }
+
+    &-1 {
+      background-color: $tigerC;
+    }
+
+    &-2 {
+      background-color: $pink;
+    }
+
+    &-3 {
+      background-color: $purple;
+    }
+  }
+
+  &__price {
+    text-align: center;
+    color: $pink;
+    font: $p;
+    
+    &-p {
+      color: $navyBlue;
+    }
   }
 }

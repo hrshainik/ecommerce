@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "../components/Layout";
+import RegularProductC from "../components/RegularProductC";
 import Section from "../components/Section";
 import styles from "../styles/Home.module.scss";
 
@@ -14,8 +15,15 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <Section bgCol="#F6F5FF">
+        <Section bgCol="#fff">
           <h1>Hello World!</h1>
+          <div className="regular-product-cs">
+            <RegularProductC />
+            <RegularProductC />
+            <RegularProductC />
+            <RegularProductC />
+            <RegularProductC />
+          </div>
         </Section>
       </Layout>
     </>
