@@ -8,18 +8,20 @@ const RegularProductC = () => {
       <div className="regular-product-c__img">
         <Image src={product} layout="responsive" alt="product" />
       </div>
-      <h3 className="regular-product-c__title">Vel elit euismod</h3>
-      <div className="regular-product-c__dot">
-        <div className="regular-product-c__dot-1"></div>
-        <div className="regular-product-c__dot-2"></div>
-        <div className="regular-product-c__dot-3"></div>
+      <div className="regular-product-c-info">
+        <h3 className="regular-product-c-info__title">Vel elit euismod</h3>
+        <div className="regular-product-c-info__dot">
+          <div className="regular-product-c-info__dot-1"></div>
+          <div className="regular-product-c-info__dot-2"></div>
+          <div className="regular-product-c-info__dot-3"></div>
+        </div>
+        <p className="regular-product-c-info__price">
+          20${" "}
+          <span className="regular-product-c-info__price-p">
+            <s>30$</s>
+          </span>
+        </p>
       </div>
-      <p className="regular-product-c__price">
-        20${" "}
-        <span className="regular-product-c__price-p">
-          <s>30$</s>
-        </span>
-      </p>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import FeatureProductC from "../components/FeatureProductC";
 import Layout from "../components/Layout";
 import RegularProductC from "../components/RegularProductC";
 import Section from "../components/Section";
@@ -34,6 +35,14 @@ export default function Home() {
             <RegularProductC />
             <RegularProductC />
             <RegularProductC />
+          </div>
+
+          <div className="feature-product-cs">
+            <FeatureProductC />
+            <FeatureProductC />
+            <FeatureProductC />
+            <FeatureProductC />
+            <FeatureProductC />
           </div>
         </Section>
       </Layout>

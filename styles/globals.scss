@@ -12,7 +12,10 @@ $skyBlue1: #EBF4F3;
 $pantonePurple: #E0D3F5;
 $white: #ffffff;
 $white1: #F6F7FB;
+$black: #000000;
 $tigerC: #DE9034;
+$crayola: #05E6B7;
+$cultured: #F7F7F7;
 $navbar: 60px;
 $maxWidth: 1200px;
 $width: 97%;
@@ -95,11 +98,19 @@ img {
   gap: 3em;
 }
 
+.feature-product-cs {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3em;
+}
+
 .regular-product-c {
   flex: 1 300px;
   display: flex;
   flex-flow: column nowrap;
   cursor: pointer;
+  text-align: center;
+  color: $navyBlue;
 
   &:hover {
     .regular-product-c__img {
@@ -111,23 +122,23 @@ img {
     width: 100%;
     background-color: $white1;
     padding: 2em;
-    margin-bottom: 10px;
     transition: background-color 300ms ease;
   }
 
-  &__title {
-    text-align: center;
-    color: $navyBlue;
-    margin-bottom: 6px;
+  &-info {
+    padding: 1rem;
+    
+    &__title {
+      margin-bottom: 6px;
     font: $h;
   }
-
+  
   &__dot {
     display: flex;
     justify-content: center;
     gap: 5px;
     margin-bottom: 12px;
-
+    
     & > div {
       width: 10px;
       height: 10px;
@@ -137,23 +148,98 @@ img {
     &-1 {
       background-color: $tigerC;
     }
-
+    
     &-2 {
       background-color: $pink;
     }
-
+    
     &-3 {
       background-color: $purple;
     }
   }
-
+  
   &__price {
-    text-align: center;
     color: $pink;
     font: $p;
     
-    &-p {
-      color: $navyBlue;
+    // &-p {
+    // }
+  }
+  }
+}
+
+.feature-product-c {
+  flex: 1 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba($black, $alpha: 0.1);
+  background-color: $white;
+  text-align: center;
+  color: $navyBlue;
+  transition: all 300ms ease;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+
+    .feature-product-c__img {
+      background-color: $cultured;
+    }
+
+    .feature-product-c-info__title {
+      color: $white;
     }
   }
+
+  &__img {
+    width: 100%;
+    background-color: $white1;
+    padding: 2em;
+    transition: background-color 300ms ease;
+  }
+
+  &-info {
+    padding: 1rem;
+
+    &__title {
+      color: $pink;
+      margin-bottom: 6px;
+      font: $h;
+      transition: all 300ms ease;
+  }
+
+  &__dot {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 12px;
+    
+    & > div {
+      width: 12px;
+      height: 4px;
+      border-radius: 100vh;
+    }
+    
+    &-1 {
+      background-color: $crayola;
+    }
+
+    &-2 {
+      background-color: $pink;
+    }
+    
+    &-3 {
+      background-color: $tigerC;
+    }
+  }
+  
+  &__code {
+    margin-bottom: 10px;
+  }
+  
+  &__price {
+    font: $p;
+  }
+}
 }
