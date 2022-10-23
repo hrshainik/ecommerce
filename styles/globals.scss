@@ -12,10 +12,12 @@ $skyBlue1: #EBF4F3;
 $pantonePurple: #E0D3F5;
 $white: #ffffff;
 $white1: #F6F7FB;
+$white2: #EEEFFB;
 $black: #000000;
 $tigerC: #DE9034;
 $crayola: #05E6B7;
 $cultured: #F7F7F7;
+$lavender: #E7E4F8;
 $navbar: 60px;
 $maxWidth: 1200px;
 $width: 97%;
@@ -79,11 +81,63 @@ section {
   }
 }
 
-nav, footer {
+nav {
   & > div {
     width: $width;
     max-width: $maxWidth;
     margin: 0 auto;
+  }
+}
+
+footer {
+  .footer-w {
+    background-color: $white2;
+
+    .footer {
+      width: $width;
+      max-width: $maxWidth;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: row wrap;
+      gap: 3rem;
+      justify-content: space-between;
+
+      & > div {
+        p {
+
+        }
+
+        ul {
+          list-style: none;
+          li {
+            span {
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright-w {
+    background-color: $lavender;
+
+    .copyright {
+      width: $width;
+      max-width: $maxWidth;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+
+      &__text {
+
+      }
+
+      &__icons {
+
+      }
+    }
   }
 }
 
