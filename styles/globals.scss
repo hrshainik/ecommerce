@@ -173,6 +173,13 @@ img {
   gap: 2em;
 }
 
+.category-cs {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
 .regular-product-c {
   flex: 1 300px;
   display: flex;
@@ -332,7 +339,27 @@ img {
     }
 
     &__disc {
-      color: rgba($violet, $alpha: 0.3)
+      color: rgba($violet, $alpha: 0.3);
+    }
+  }
+}
+
+.category-c {
+  flex: 0 300px;
+  
+  &__img {
+    background-color: $white1;
+    height: 300px;
+    border-radius: 100vh;
+    padding: 2rem;
+  }
+
+  &-info {
+    text-align: center;
+    padding: 1rem 2rem 2rem;
+
+    &__title {
+      color: $navyBlue;
     }
   }
 }
