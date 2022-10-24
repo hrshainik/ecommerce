@@ -1,48 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Lato:wght@300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Lato:wght@300;400;700;900&display=swap");
 
 $pink: #fb2e86;
 $red: #fb2448;
 $blue: #2f1ac4;
-$offNavyBlue: #3F509E;
+$offNavyBlue: #3f509e;
 $navyBlue: #151875;
-$purple: #7E33E0;
-$offPurple: #9F63B5;
-$skyBlue: #F3F9FF;
-$skyBlue1: #EBF4F3;
-$pantonePurple: #E0D3F5;
+$purple: #7e33e0;
+$offPurple: #9f63b5;
+$skyBlue: #f3f9ff;
+$skyBlue1: #ebf4f3;
+$pantonePurple: #e0d3f5;
 $white: #ffffff;
-$white1: #F6F7FB;
-$white2: #EEEFFB;
+$white1: #f6f7fb;
+$white2: #eeeffb;
 $black: #000000;
-$tigerC: #DE9034;
-$crayola: #05E6B7;
-$cultured: #F7F7F7;
-$lavender: #E7E4F8;
-$coolGray: #8A8FB9;
-$manatee: #9DA0AE;
-$cobalt: #31208A;
-$violet: #1A0B5B;
+$tigerC: #de9034;
+$crayola: #05e6b7;
+$cultured: #f7f7f7;
+$lavender: #e7e4f8;
+$coolGray: #8a8fb9;
+$manatee: #9da0ae;
+$cobalt: #31208a;
+$violet: #1a0b5b;
 $navbar: 60px;
 $maxWidth: 1200px;
-$width: 97%;
-$h: normal 700 18px 'Josefin Sans', sans-serif;
-$p: normal 400 14px 'Josefin Sans', sans-serif;
+$width: 100%;
+$padLR: 12px;
+$h: normal 700 18px "Josefin Sans", sans-serif;
+$p: normal 400 14px "Josefin Sans", sans-serif;
 
 @mixin for-size($size) {
   @if $size == phone-only {
-    @media (max-width: 599px) { @content; }
+    @media (max-width: 599px) {
+      @content;
+    }
   } @else if $size == tablet-portrait-up {
-    @media (min-width: 600px) { @content; }
+    @media (min-width: 600px) {
+      @content;
+    }
   } @else if $size == tablet-landscape-up {
-    @media (min-width: 900px) { @content; }
+    @media (min-width: 900px) {
+      @content;
+    }
   } @else if $size == desktop-up {
-    @media (min-width: 1200px) { @content; }
+    @media (min-width: 1200px) {
+      @content;
+    }
   } @else if $size == big-desktop-up {
-    @media (min-width: 1800px) { @content; }
+    @media (min-width: 1800px) {
+      @content;
+    }
   }
 }
 
-*, *::before, *::after {
+@mixin section($padTB) {
+  width: $width;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: $padTB $padLR;
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -55,8 +75,8 @@ $p: normal 400 14px 'Josefin Sans', sans-serif;
 
 html,
 body {
-  font-family: 'Josefin Sans', sans-serif;
-  font-family: 'Lato', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 a {
@@ -78,18 +98,13 @@ section {
   background-color: $white;
 
   .section {
-    width: $width;
-    max-width: $maxWidth;
-    margin: 0 auto;
-    padding: 2.5rem 0;
+    @include section(2.4rem);
   }
 }
 
 nav {
   & > div {
-    width: $width;
-    max-width: $maxWidth;
-    margin: 0 auto;
+    @include section(0);
   }
 }
 
@@ -98,14 +113,11 @@ footer {
     background-color: $white2;
 
     .footer {
-      width: $width;
-      max-width: $maxWidth;
-      margin: 0 auto;
+      @include section(3rem);
       display: flex;
-      flex-wrap: row wrap;
+      flex-flow: row wrap;
       gap: 3rem;
       justify-content: space-between;
-      padding: 3rem 0;
 
       & > div {
         p {
@@ -120,7 +132,6 @@ footer {
           li {
             margin-bottom: 10px;
             span {
-
             }
           }
         }
@@ -132,19 +143,15 @@ footer {
     background-color: $lavender;
 
     .copyright {
-      width: $width;
-      max-width: $maxWidth;
-      margin: 0 auto;
+      @include section(12px);
       display: flex;
       justify-content: space-between;
-      padding: 12px 0;
 
       &__text {
         color: $manatee;
       }
 
       &__icons {
-
       }
     }
   }
@@ -203,44 +210,44 @@ img {
 
   &-info {
     padding: 1rem;
-    
+
     &__title {
       margin-bottom: 6px;
-    font: $h;
-  }
-  
-  &__dot {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-bottom: 12px;
-    
-    & > div {
-      width: 10px;
-      height: 10px;
-      border-radius: 100vh;
+      font: $h;
     }
 
-    &-1 {
-      background-color: $tigerC;
+    &__dot {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-bottom: 12px;
+
+      & > div {
+        width: 10px;
+        height: 10px;
+        border-radius: 100vh;
+      }
+
+      &-1 {
+        background-color: $tigerC;
+      }
+
+      &-2 {
+        background-color: $pink;
+      }
+
+      &-3 {
+        background-color: $purple;
+      }
     }
-    
-    &-2 {
-      background-color: $pink;
+
+    &__price {
+      color: $pink;
+      font: $p;
+
+      // &-p {
+      // }
     }
-    
-    &-3 {
-      background-color: $purple;
-    }
-  }
-  
-  &__price {
-    color: $pink;
-    font: $p;
-    
-    // &-p {
-    // }
-  }
   }
 }
 
@@ -283,41 +290,41 @@ img {
       margin-bottom: 6px;
       font: $h;
       transition: all 300ms ease;
-  }
-
-  &__dot {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-bottom: 12px;
-    
-    & > div {
-      width: 12px;
-      height: 4px;
-      border-radius: 100vh;
-    }
-    
-    &-1 {
-      background-color: $crayola;
     }
 
-    &-2 {
-      background-color: $pink;
+    &__dot {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-bottom: 12px;
+
+      & > div {
+        width: 12px;
+        height: 4px;
+        border-radius: 100vh;
+      }
+
+      &-1 {
+        background-color: $crayola;
+      }
+
+      &-2 {
+        background-color: $pink;
+      }
+
+      &-3 {
+        background-color: $tigerC;
+      }
     }
-    
-    &-3 {
-      background-color: $tigerC;
+
+    &__code {
+      margin-bottom: 10px;
+    }
+
+    &__price {
+      font: $p;
     }
   }
-  
-  &__code {
-    margin-bottom: 10px;
-  }
-  
-  &__price {
-    font: $p;
-  }
-}
 }
 
 .feature-c {
@@ -346,7 +353,7 @@ img {
 
 .category-c {
   flex: 0 300px;
-  
+
   &__img {
     background-color: $white1;
     height: 300px;
