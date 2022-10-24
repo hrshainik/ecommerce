@@ -18,6 +18,10 @@ $tigerC: #DE9034;
 $crayola: #05E6B7;
 $cultured: #F7F7F7;
 $lavender: #E7E4F8;
+$coolGray: #8A8FB9;
+$manatee: #9DA0AE;
+$cobalt: #31208A;
+$violet: #1A0B5B;
 $navbar: 60px;
 $maxWidth: 1200px;
 $width: 97%;
@@ -101,15 +105,20 @@ footer {
       flex-wrap: row wrap;
       gap: 3rem;
       justify-content: space-between;
+      padding: 3rem 0;
 
       & > div {
         p {
-
+          color: $black;
+          margin-bottom: 1.2rem;
         }
 
         ul {
           list-style: none;
+          color: $coolGray;
+
           li {
+            margin-bottom: 10px;
             span {
 
             }
@@ -131,7 +140,7 @@ footer {
       padding: 12px 0;
 
       &__text {
-
+        color: $manatee;
       }
 
       &__icons {
@@ -156,6 +165,12 @@ img {
   display: flex;
   flex-flow: row wrap;
   gap: 3em;
+}
+
+.feature-cs {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2em;
 }
 
 .regular-product-c {
@@ -296,4 +311,28 @@ img {
     font: $p;
   }
 }
+}
+
+.feature-c {
+  flex: 1 250px;
+  box-shadow: 0 8px 40px rgba($cobalt, $alpha: 0.05);
+  background-color: $white;
+
+  &__img {
+    padding: 2.4rem 6rem 1rem;
+  }
+
+  &-info {
+    text-align: center;
+    padding: 1rem 2rem 2.4rem;
+
+    &__title {
+      color: $navyBlue;
+      margin-bottom: 1rem;
+    }
+
+    &__disc {
+      color: rgba($violet, $alpha: 0.3)
+    }
+  }
 }
